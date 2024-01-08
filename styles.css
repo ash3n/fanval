@@ -1,58 +1,120 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    color: white;
+    line-height: 1.6;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #121212;
+    background: linear-gradient(135deg, #000000 0%, #07192f 50%, #000000 100%);
     color: #ffffff;
     margin: 0;
     padding: 0;
     line-height: 1.6;
 }
 
+/* Header and Menu Bar Styling */
+header {
+    border: 1px solid rgb(75, 75, 75); /* Clean grey outline */
+    background-color: rgba(255, 255, 255, 0.0); /* 90% transparent */
+    border-radius: 15px 15px 15px 15px;
+    padding: 10px 0;
+    position: fixed;
+    top: 20px; /* Space from the top */
+    width: 80%;
+    left: 10%; /* Centering the header */
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(16px);
+}
+
+.flex-container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .container {
     width: 80%;
     margin: auto;
     overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
 }
 
-header {
-    background-color: #202020;
-    color: white;
-    padding: 20px 0;
-}
-
-header .logo {
-    color: #e0e020;
-    text-decoration: none;
+.logo {
     font-size: 24px;
     font-weight: bold;
+    color: white;
+    text-decoration: none;
 }
 
 nav ul {
+    list-style-type: none;
+    margin: 0;
     padding: 0;
-    text-align: right;
+    display: flex;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 20px;
+    margin-left: 20px;
 }
 
 nav ul li a {
-    color: white;
+    color: #ccd6f6;
     text-decoration: none;
     font-size: 16px;
 }
 
-.hero {
-    background-color: #1a1a1a;
-    padding: 50px 0;
-    text-align: center;
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    color: white;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Black outer glow */;
 }
 
+h1 {
+    font-size: 3.0em;
+    margin-bottom: 0.5em;
+}
+
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+p {
+    color: #ccc;
+}
+
+.blue-text {
+    color: #4c8eda; /* Adjust the color to the shade of medium blue you prefer */
+}
+
+/* Hero Section */
+.hero {
+    padding-top: 0%; /* Adjust if necessary */
+    height: 100vh;
+    display: flex;
+    flex-direction: column; /* Ensures content flows vertically */
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
+}
+
+/* General Section */
 section {
     padding: 50px 0;
     text-align: center;
 }
 
+/* Player Cards */
 .card-container {
     display: flex;
     justify-content: space-around;
@@ -60,16 +122,17 @@ section {
 }
 
 .card {
-    background-color: #333;
+    background: linear-gradient(45deg, #0d0d0d 0%, #07192f 75%, #122754 100%);
     width: 300px;
     margin: 20px;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border: 1px solid #122754; /* Well-defined border */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Black outer glow */;
 }
 
 .card-image {
-    background-color: #555;
+    background-color: rgba(46, 64, 87, 0.1); /* Placeholder for image */
     height: 200px;
     margin-bottom: 15px;
     border-radius: 5px;
@@ -77,31 +140,41 @@ section {
 
 .card-info h3 {
     margin: 0;
-    color: #e0e020;
+    color: #4c8eda; /* Medium blue for headings */
 }
 
-footer {
-    background-color: #202020;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
+.card-info p {
+    color: #ccd6f6; /* Soft blue for text */
 }
 
+/* Button Styling */
 button {
-    background-color: #e0e020;
-    color: #202020;
+    background-color: #14457d; /* Medium blue for buttons */
+    color: white;
     border: none;
-    padding: 10px 20px;
-    text-transform: uppercase;
+    padding: 15px 30px;
     cursor: pointer;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 14px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Black outer glow */;
 }
 
 button:hover {
-    background-color: #c0c010;
+    background-color: #367bc3; /* Slightly darker blue on hover */
 }
 
+/* Footer Styling */
+footer {
+    border: 1px solid rgb(75, 75, 75); /* Clean grey outline */
+    background-color: rgba(22, 33, 62, 0.0);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7); /* Black outer glow */
+    backdrop-filter: blur(16px);
+}
+
+/* Responsive Design */
 @media (max-width: 700px) {
     .container {
         width: 95%;
