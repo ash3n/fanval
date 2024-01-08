@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fantasy Valorant League</title>
+    <title>Fantasy Valorant</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
@@ -11,7 +11,7 @@
     <header>
         <nav>
             <div class="flex-container">
-                <a href="#home" class="logo">Fantasy Valorant League</a>
+                <a href="#home" class="logo">Fantasy Valorant</a>
                 <ul>
                     <li><a href="#how-it-works">How It Works</a></li>
                     <li><a href="#create-team">Create Your Team</a></li>
@@ -22,10 +22,12 @@
     </header>
 
     <section id="home" class="hero">
-        <div class="container">
+        <div class="container hero-text-container">
             <h1>Join the Ultimate Valorant Fantasy League</h1>
             <p>Compete with fans worldwide in the most thrilling e-sports fantasy league.</p>
-            <button onclick="location.href='#create-team'">Create Your Team</button>
+        </div>
+        <div class="hero-image-container">
+            <img src="blue_agents.png" alt="Valorant Image">
         </div>
     </section>
 
@@ -33,6 +35,7 @@
         <div class="container">
             <h2>How <span class="blue-text">Fantasy Valorant</span> Works</h2>
             <p>In Fantasy Valorant, you build your dream team of pro Valorant players. Points are scored based on the real-life performances of your selected players in professional matches. Manage your roster throughout the season, trade players, and compete against friends and fans for the top spot in the league.</p>
+            <button onclick="location.href='#create-team'">Create Your Team</button>
         </div>
     </section>
 
@@ -41,6 +44,20 @@
             <h2>Featured Players</h2>
             <div class="card-container">
                 <!-- Placeholder for player cards -->
+                <div class="card">
+                    <div class="card-image"></div>
+                    <div class="card-info">
+                        <h3>Player Name</h3>
+                        <p>Player Stats</p>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-image"></div>
+                    <div class="card-info">
+                        <h3>Player Name</h3>
+                        <p>Player Stats</p>
+                    </div>
+                </div>
                 <div class="card">
                     <div class="card-image"></div>
                     <div class="card-info">
@@ -63,7 +80,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Fantasy Valorant League. All rights reserved.</p>
+            <p>&copy; 2024 Fantasy Valorant. All rights reserved.</p>
         </div>
     </footer>
 </body>

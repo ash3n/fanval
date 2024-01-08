@@ -18,8 +18,8 @@ body {
 /* Header and Menu Bar Styling */
 header {
     border: 1px solid rgb(75, 75, 75); /* Clean grey outline */
-    background-color: rgba(255, 255, 255, 0.0); /* 90% transparent */
-    border-radius: 15px 15px 15px 15px;
+    background-color: rgba(7, 25, 47, 0.0); /* 90% transparent */
+    border-radius: 10px;
     padding: 10px 0;
     position: fixed;
     top: 20px; /* Space from the top */
@@ -31,7 +31,7 @@ header {
 }
 
 .flex-container {
-    width: 90%;
+    width: 80%;
     margin: auto;
     overflow: hidden;
     display: flex;
@@ -48,9 +48,9 @@ header {
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
+    font-size: 20px;
+    font-weight: normal;
+    color: rgb(200, 200, 200);
     text-decoration: none;
 }
 
@@ -100,12 +100,34 @@ p {
 
 /* Hero Section */
 .hero {
-    padding-top: 0%; /* Adjust if necessary */
+    padding-top: 5vh; /* Adjust if necessary */
     height: 100vh;
     display: flex;
     flex-direction: column; /* Ensures content flows vertically */
     justify-content: center; /* Centers content vertically */
     align-items: center; /* Centers content horizontally */
+    position: relative;
+}
+
+.hero-image-container {
+    position: absolute;
+    width: 100%;
+    z-index: -1; /* Ensures the image stays behind the content */
+}
+
+.hero-image-container img {
+    width: 45%;
+    height: auto;
+}
+
+.hero-text-container {
+    border: 1px solid rgb(7, 25, 47); /* Clean grey outline */
+    background-color: rgba(255, 255, 255, 0.0); /* 90% transparent */
+    border-radius: 15px;
+    backdrop-filter: blur(16px);
+    padding-bottom: 30px;
+    box-shadow: 0px 0px 10px rgba(54, 123, 195, 0.7); /* Red outer glow */;
+    width: 70%;
 }
 
 /* General Section */
@@ -156,6 +178,7 @@ button {
     cursor: pointer;
     border-radius: 5px;
     font-size: 14px;
+    font-weight: bold;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Black outer glow */;
 }
 
@@ -170,7 +193,7 @@ footer {
     color: white;
     text-align: center;
     padding: 20px 0;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7); /* Black outer glow */
+    box-shadow: 0px 0px 10px rgba(54, 123, 195, 0.7); /* Red outer glow */;
     backdrop-filter: blur(16px);
 }
 
