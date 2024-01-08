@@ -9,39 +9,61 @@
 <body>
     <header>
         <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About Fantasy Valorant</a></li>
-                <li><a href="#create-team">Create Your Team</a></li>
-                <li><a href="#leaderboard">Leaderboard</a></li>
-            </ul>
+            <div class="container">
+                <a href="#home" class="logo">Fantasy Valorant League</a>
+                <ul>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#create-team">Create Your Team</a></li>
+                    <li><a href="#leaderboard">Leaderboard</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
-    <section id="home">
-        <h1>Welcome to Fantasy Valorant League</h1>
-        <p>Join the ultimate fantasy league for Valorant enthusiasts!</p>
-        <button onclick="location.href='#create-team'">Create Your Team</button>
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>Join the Ultimate Valorant Fantasy League</h1>
+            <p>Compete with fans worldwide in the most thrilling e-sports fantasy league.</p>
+            <button onclick="location.href='#create-team'">Create Your Team</button>
+        </div>
     </section>
 
-    <section id="about">
-        <h2>About Fantasy Valorant</h2>
-        <p>Compete with friends and fans worldwide. Build your dream team of pro players and score points based on their real-game performances.</p>
+    <section id="how-it-works">
+        <div class="container">
+            <h2>How Fantasy Valorant Works</h2>
+            <p>In Fantasy Valorant, you build your dream team of pro Valorant players. Points are scored based on the real-life performances of your selected players in professional matches. Manage your roster throughout the season, trade players, and compete against friends and fans for the top spot in the league.</p>
+        </div>
+    </section>
+
+    <section id="player-cards">
+        <div class="container">
+            <h2>Featured Players</h2>
+            <div class="card-container">
+                <!-- Placeholder for player cards -->
+                <div class="card">
+                    <div class="card-image">[Player Image]</div>
+                    <div class="card-info">
+                        <h3>Player Name</h3>
+                        <p>Player Stats</p>
+                    </div>
+                </div>
+                <!-- Repeat for multiple player cards -->
+            </div>
+        </div>
     </section>
 
     <section id="create-team">
-        <h2>Create Your Team</h2>
-        <p>Assemble your champions! Select players based on your strategy and lead your team to victory.</p>
-        <button onclick="location.href='#'">Start Building</button>
-    </section>
-
-    <section id="leaderboard">
-        <h2>Leaderboard</h2>
-        <p>See where you stand among the greats. Top the charts and earn exclusive rewards!</p>
+        <div class="container">
+            <h2>Build Your Dream Team</h2>
+            <p>Assemble your roster of champions. Choose wisely based on player stats and performances to dominate the league.</p>
+            <button onclick="location.href='#'">Start Building</button>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2024 Fantasy Valorant League</p>
+        <div class="container">
+            <p>&copy; 2024 Fantasy Valorant League. All rights reserved.</p>
+        </div>
     </footer>
 </body>
 </html>
