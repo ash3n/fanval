@@ -16,6 +16,19 @@ body {
     line-height: 1.6;
 }
 
+.container {
+    width: 80%;
+    max-width: 1440px;
+    margin: auto; /* This will center the container */
+    overflow: hidden;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex{
+    display: flex;
+}
+
 /* Header and Menu Bar Styling */
 header {
     border: 1px solid rgb(75, 75, 75); /* Clean grey outline */
@@ -29,23 +42,6 @@ header {
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(16px);
-}
-
-.flex-container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.container {
-    width: 80%;
-    margin: auto;
-    overflow: hidden;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .logo {
@@ -101,13 +97,11 @@ p {
 
 /* Hero Section */
 .hero {
-    padding-top: 5vh; /* Adjust if necessary */
-    height: 100vh;
+    padding: 150px 0; /* Adjust if necessary */
     display: flex;
     flex-direction: column; /* Ensures content flows vertically */
     justify-content: center; /* Centers content vertically */
     align-items: center; /* Centers content horizontally */
-    position: relative;
 }
 
 .hero-image-container {
@@ -118,47 +112,49 @@ p {
 
 .hero-image-container img {
     width: 45%;
+    max-width: 720px;
     height: auto;
 }
 
 .hero-text-container {
     border: 1px solid rgb(7, 25, 47); /* Clean grey outline */
-    background-color: rgba(255, 255, 255, 0.0); /* 90% transparent */
+    background-color: rgba(10, 10, 10, 0.4); /* 90% transparent */
     border-radius: 15px;
     backdrop-filter: blur(16px);
     padding-bottom: 30px;
-    box-shadow: 0px 0px 10px rgba(54, 123, 195, 0.7); /* Red outer glow */;
+    box-shadow: 0px 0px 10px rgba(54, 123, 195, 0.7); /* Blue outer glow */;
     width: 70%;
 }
 
 /* General Section */
 section {
-    padding: 50px 0;
+    padding: 20px 0;
+    margin: 150px 0;
     text-align: center;
 }
 
 /* Player Cards */
 .card-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    /* ... other styles ... */
 }
 
 .card {
-    background: linear-gradient(45deg, #0d0d0d 0%, #07192f 75%, #122754 100%);
-    width: 300px;
-    margin: 20px;
-    padding: 20px;
-    border-radius: 10px;
-    border: 1px solid #122754; /* Well-defined border */
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); /* Black outer glow */;
+    /* background: linear-gradient(45deg, #0d0d0d 0%, #07192f 75%, #122754 100%); */
+    width: 200px;
+    height: 240px;
+    padding: 5px;
+    border: 0px solid #122754; /* Well-defined border */
 }
 
 .card-image {
-    background-color: rgba(46, 64, 87, 0.1); /* Placeholder for image */
-    height: 200px;
-    margin-bottom: 15px;
-    border-radius: 5px;
+    width: 100%; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* This will cover the area of the div without stretching the image */
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
 
 .card-info h3 {
@@ -168,6 +164,14 @@ section {
 
 .card-info p {
     color: #ccd6f6; /* Soft blue for text */
+}
+
+/* Table */
+
+.table-container img {
+    width: 100%;      /* Makes the image take up the full width of its container */
+    height: auto;     /* Maintains the aspect ratio of the image */
+    object-fit: contain; /* Ensures the entire image is visible */
 }
 
 /* Button Styling */
