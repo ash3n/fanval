@@ -27,7 +27,7 @@ body {
 
 .flex{
     display: flex;
-    flex-direction: row-reverse;
+    gap: 20px;
 }
 
 /* Header and Menu Bar Styling */
@@ -136,9 +136,11 @@ section {
 
 /* Player Cards */
 .card-container {
-    width: 80%;
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    justify-content: center; /* Centers content vertically */
+    align-items: center; /* Centers content horizontally */
     /* ... other styles ... */
 }
 
