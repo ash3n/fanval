@@ -101,6 +101,12 @@ p {
     color: #4c8eda; /* Adjust the color to the shade of medium blue you prefer */
 }
 
+.cursive {
+    font-family: 'Brush Script MT', cursive;
+    font-style: italic;
+    font-size: 175%; /* Increases the text size by 50% */
+}
+
 /* Hero Section */
 .hero {
     padding: 150px 0; /* Adjust if necessary */
