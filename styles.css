@@ -239,13 +239,28 @@ footer {
         width: 95%;
     }
 
-    nav ul {
-        text-align: center;
-        margin-top: 20px;
+    .flex {
+        flex-direction: column-reverse;
+        gap: 0;
     }
 
-    nav ul li {
-        display: block;
-        margin: 10px 0;
+    header {
+        display: none;
+    }
+
+    .hero {
+        padding: 120px 0; /* Adjust if necessary */
+    }
+
+    .hero-text-container {
+        border: none;
+        background-color: rgba(0, 0, 0, 0.0);
+        backdrop-filter: none;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    .hero-image-container {
+        display: none;
     }
 }
