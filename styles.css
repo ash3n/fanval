@@ -112,6 +112,31 @@ p {
 }
 
 /* Hero Section */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px); /* Starts 30 pixels down */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero-fade0 {
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+.hero-fade1 {animation: fadeIn 0.5s ease-in-out forwards; }
+.hero-fade2 {animation: fadeIn 0.85s ease-in-out forwards; }
+.hero-fade3 {animation: fadeIn 1.1s ease-in-out forwards;}
+.hero-fade4 {animation: fadeIn 1.3s ease-in-out forwards; }
+
+.delay-fade {
+    opacity: 0;
+    animation-delay: 0.75s;
+}
+
 .hero {
     padding: 350px 0; /* Adjust if necessary */
     display: flex;
@@ -132,7 +157,7 @@ p {
     height: auto;
 }
 
-.hero-text-container {
+.hero-box {
     border: 1px solid rgb(7, 25, 47); /* Clean grey outline */
     background-color: rgba(7, 25, 47, 0.2); /* 90% transparent */
     border-radius: 15px;
@@ -143,13 +168,42 @@ p {
     z-index: 2;
 }
 
+.hero-text-container {
+    width: 100%;
+}
+
 .hero button {
     border: 1px solid #fff; /* Clean grey outline */
     background-color: rgba(20, 69, 125, 0.0); /* Medium blue for buttons */
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7); /* Blue outer glow */;
 }
 
+.twitter-link {
+    color: #1DA1F2; /* Twitter's blue color */
+    font-size: 0.8em; /* Increase the size */
+    text-decoration: none; /* Optional: Removes underline from the link */
+    text-shadow: 0px 0px 15px rgba(0, 0, 0, 1.0);
+}
+
+.twitter-link .fa-twitter {
+    margin-right: 0px; /* Adds space between the icon and text */
+}
+
 /* General Section */
+
+/* Initial state of sections */
+.fade {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* State of sections when they become visible */
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 section {
     padding: 100px 0;
     margin: 20px 0;
@@ -260,7 +314,7 @@ footer {
         padding: 120px 0; /* Adjust if necessary */
     }
 
-    .hero-text-container {
+    .hero-box {
         border: none;
         background-color: rgba(0, 0, 0, 0.0);
         backdrop-filter: none;
@@ -270,5 +324,9 @@ footer {
 
     .hero-image-container {
         display: none;
+    }
+
+    .delay {
+        animation-delay: 0s;
     }
 }

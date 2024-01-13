@@ -7,6 +7,7 @@
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <header>
@@ -24,18 +25,25 @@
     </header>
 
     <section id="home" class="hero">
-        <div class="container hero-text-container">
-            <h1>Join the Ultimate Valorant Fantasy League</h1>
-            <p>Compete with fans worldwide in the most thrilling esports fantasy league.</p>
-            <button onclick="window.open('https://forms.gle/xCmYYsq5L5pkcMi58', '_blank')">Join the Beta</button>
+        <div class="container hero-box">
+            <div>
+                <h1 class="hero-fade1 delay-fade">Join the Ultimate Valorant Fantasy League</h1>
+                <p class="hero-fade2 delay-fade">Compete with fans worldwide in the most thrilling esports fantasy league.</p>
+                <button class="hero-fade3 delay-fade" onclick="window.open('https://forms.gle/xCmYYsq5L5pkcMi58', '_blank')">Join the Beta</button>
+                <div class="hero-fade4 delay-fade" style="margin-top: 20px; font-size: 20px;">
+                    <a href="https://twitter.com/Fantasy_Val" target="_blank" class="twitter-link">
+                        <i class="fa fa-twitter"></i> Follow us on Twitter
+                    </a>
+                </div>
+            </div>
         </div>
-        <div class="hero-image-container">
-            <img src="images/hero.png" alt="Valorant Image">
+        <div class="hero-image-container hero-fade0">
+            <img style="animation: fadeIn 0.25s ease-in-out forwards;" src="images/hero.png" alt="Valorant Image">
         </div>
     </section>
 
     <section id="how-it-works">
-        <div class="container">
+        <div class="container fade">
             <div class="container no-flex">
                 <h2>Welcome to <span class="blue-text">Fantasy Valorant</span></h2>
                 <p>In Fantasy Valorant, you can build your dream team of professional Valorant players across different regions. Points are scored based on the real-life performances of your selected players in professional matches. Play in normal draft, cross-regional draft, salary cap draft, or a custom league of your choosing with countless possibilities. Manage your roster throughout the season, trade players, and compete against friends for the glory of the top spot in the league.</p>
@@ -46,7 +54,7 @@
     </section>
 
     <section id="betting">
-        <div class="container flex">
+        <div class="container flex fade">
             <div class="container">
                 <h2><span class="blue-text">Flexible</span> Betting Options</h2>
                 <p>Fantasy Valorant will also include exciting esports betting options for users looking to put their analysis skills to use in this exciting domain of action. Play in weekly over/under betting on players' stats including kills, assists, ACS, and more. Stake money on your favorite teams with match winner betting options. Join other users in this statistics-based opportunity to turn your knowledge of professional Valorant into real money.</p>
@@ -79,7 +87,7 @@
     </section>
 
     <section id="create-team">
-        <div class="container flex reverse">
+        <div class="container flex reverse fade">
             <div class="container">
                 <h2>Build Your <span class="blue-text">Dream Team</span></h2>
                 <p>Assemble your dream roster of champions. Choose wisely based on player stats and performances to dominate the league.</p>
@@ -93,7 +101,7 @@
     </section>
 
     <section id="more-betting">
-        <div class="container flex">
+        <div class="container flex fade">
             <div class="container">
                 <h2><span class="blue-text">Analyze</span> Player Details</h2>
                 <p>Easily explore and compare players to better optimize your team. Utilize statistics to make your informed decision of drafts and trades.</p>
@@ -114,7 +122,7 @@
     </section>
 
     <section id="play-with-friends">
-        <div class="container flex reverse">
+        <div class="container flex reverse fade">
             <div class="container">
                 <h2>Compete Against <span class="blue-text">Friends</span></h2>
                 <p>Create your customizable league of up to 10 players. Invite friends to form teams with personalizable characteristics. Change settings to fit your needs of flexibility.</p>
@@ -128,7 +136,7 @@
     </section>
 
     <section id="regions">
-        <div class="container flex">
+        <div class="container flex fade">
             <div class="container">
                 <h2>Play Across <span class="blue-text">Multiple Regions</span></h2>
                 <p>Gain access to every tournament series across Americas, EMEA, Pacific, and China. Create region-specific leagues, or enable cross-regional drafting options to diversify the playing pool.</p>
@@ -142,7 +150,7 @@
     </section>
 
     <section id="beta-signup">
-        <div class="container">
+        <div class="container fade">
             <div class="container" style="width:61%;">
                 <h2 style="margin-bottom:0;">Register for the <span class="blue-text">Beta Release</span></h2>
                 <p><span class="blue-text cursive">Create</span> your dream team.<br><span class="blue-text cursive">Compete</span> against friends.<br><span class="blue-text cursive">Conquer</span> the leagues.</p>
@@ -156,5 +164,24 @@
             <p>&copy; 2024 Fantasy Valorant. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const elements = document.querySelectorAll('.fade');
+    
+            function checkVisibility() {
+                elements.forEach(el => {
+                    const rect = el.getBoundingClientRect();
+                    if (rect.top <= window.innerHeight) {
+                        el.classList.add('visible');
+                    }
+                });
+            }
+    
+            window.addEventListener('scroll', checkVisibility);
+            checkVisibility(); // Initialize check on page load
+        });
+    </script>    
+
 </body>
 </html>
